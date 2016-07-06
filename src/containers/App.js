@@ -34,7 +34,11 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
+  const actions = {
+    increment: require('../actions/increment.js'),
+    add_comment: require('../actions/add_comment.js'),
+    remove_comment: require('../actions/remove_comment.js')
+  };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }
